@@ -1,0 +1,15 @@
+Source: maui
+Section: utils
+Priority: optional
+Maintainer: Cluster Resources <mauiusers@supercluster.org>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev, libtorque2-dev
+Standards-Version: 3.9.4
+Homepage: http://clusterresources.com/maui
+
+Package: maui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: This package contains the Maui Scheduler
+ This package contains the Maui Scheduler, an advance reservation based HPC
+ batch scheduler with extensive job management and resource optimization
+ features.

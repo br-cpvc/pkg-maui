@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@  --with autotools-dev
+
+override_dh_auto_configure:
+	./configure --prefix=/usr --with-spooldir=/var/spool/maui
+	sed -i'.bkp' 's/\$$(INST_DIR)/\$$(DESTDIR)\/\$$(INST_DIR)/g' src/*/Makefile
+	sed -i'' 's/\$$(MSCHED_HOME)/\$$(DESTDIR)\/\$$(MSCHED_HOME)/g' src/*/Makefile
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$$(pwd)/debian/maui install
