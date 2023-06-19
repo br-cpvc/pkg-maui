@@ -19,7 +19,9 @@ fi
 # (eg. node-pretty-hrtime_1.0.3.orig.tar.gz).
 if [ ! -f maui_3.3.1.orig.tar.gz ]; then
     # from https://twiki.cern.ch/twiki/bin/view/Main/TorqueAndMaui
-    curl https://twiki.cern.ch/twiki/pub/Main/TorqueAndMaui/maui-3.3.1.tar.gz -o maui_3.3.1.orig.tar.gz
+    #curl https://twiki.cern.ch/twiki/pub/Main/TorqueAndMaui/maui-3.3.1.tar.gz -o maui_3.3.1.orig.tar.gz
+    # from: https://support.adaptivecomputing.com/hpc-cloud-support-portal-2/
+    curl --insecure https://support.adaptivecomputing.com/wp-content/uploads/filebase/maui-downloads/maui-3.3.1.tar.gz -o maui_3.3.1.orig.tar.gz
 fi
 md5sum -c maui_3.3.1.orig.tar.gz.md5sum
 # Untar the tarball.
