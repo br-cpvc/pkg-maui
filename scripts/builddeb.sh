@@ -42,11 +42,12 @@ cd ..
 mkdir -p original
 cp -r $srcdir/debian original/
 
-# and manually edited changes
+# and manually edited cosmetic changes (descriptions and comments)
 cp debian/changelog $srcdir/debian/changelog
 cp debian/control $srcdir/debian/control
-cp debian/rules $srcdir/debian/rules
 cp debian/maui.init $srcdir/debian/maui.init
+# and manually edited behavior changes (compile/installation/service scripts)
+cp debian/rules $srcdir/debian/rules
 cp debian/maui.postinst $srcdir/debian/maui.postinst
 
 # show manually edited changed using diff
