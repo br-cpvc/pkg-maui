@@ -48,7 +48,6 @@ cp debian/control $srcdir/debian/control
 cp debian/maui.init $srcdir/debian/maui.init
 # and manually edited behavior changes (compile/installation/service scripts)
 cp debian/rules $srcdir/debian/rules
-cp debian/maui.postinst $srcdir/debian/maui.postinst
 
 # show manually edited changed using diff
 set +e
