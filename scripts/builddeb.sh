@@ -55,6 +55,10 @@ diff -r original/debian $srcdir/debian
 set -e
 #exit 0
 
+cat << EOF > $srcdir/debian/conffiles
+/var/spool/maui/maui.cfg
+EOF
+
 version="3.3.1-1"
 package="maui"
 arch="amd64"
